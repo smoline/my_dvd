@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: { omniauth_callbacks: 'omniauth_callbacks' }
-
+  devise_for :users
   get 'pages/landing'
+  # root 'dvds#index'
   root 'pages#landing'
   resources :dvds
-
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
