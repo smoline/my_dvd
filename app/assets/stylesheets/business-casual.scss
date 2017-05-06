@@ -4,7 +4,7 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 
-body {
+.s-body {
     font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
     background: url('./theater.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -41,13 +41,13 @@ hr {
     display: none;
 }
 
-.navbar-brand {
+.s-navbar-brand {
     text-transform: uppercase;
     font-weight: 900;
     letter-spacing: 2px;
 }
 
-.navbar-nav {
+.s-navbar-nav {
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 3px;
@@ -148,33 +148,33 @@ footer p {
         color: #fff;
     }
 
-    .navbar {
+    .s-navbar {
         border-radius: 0;
     }
 
-    .navbar-header {
+    .s-navbar-header {
         display: none;
     }
 
-    .navbar {
+    .s-navbar {
         min-height: 0;
     }
 
-    .navbar-default {
+    .s-navbar-default {
         border: none;
         background: #fff;
         background: rgba(255,255,255,0.9);
     }
 
-    .nav>li>a {
+    .s-nav>li>a {
         padding: 35px;
     }
 
-    .navbar-nav>li>a {
+    .s-navbar-nav>li>a {
         line-height: normal;
     }
 
-    .navbar-nav {
+    .s-navbar-nav {
         display: table;
         float: none;
         margin: 0 auto;
