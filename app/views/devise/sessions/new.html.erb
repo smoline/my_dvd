@@ -4,7 +4,7 @@
     <h2 class="form-signin-heading">Please login</h2>
     <div class="field">
       <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Email Address", type: "email" %>
+      <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Email Address", type: "email" %><br />
     </div>
     <div class="field">
       <%= f.label :password %><br />
@@ -17,8 +17,20 @@
       </div>
     <% end -%>
     <div class="actions">
-      <%= f.submit "Log in", class: "btn btn-lg btn-primary btn-block" %>
+      <%= f.submit "Log in", class: "btn btn-lg btn-primary btn-block" %><br />
     </div>
+    <%= link_to('/users/auth/facebook', {:class => "btn btn-block btn-social btn-facebook"}) do %>
+      <span class="fa fa-facebook"></span>Sign in with Facebook
+    <%- end %>
+    <%= link_to('auth/google', {:class => "btn btn-block btn-social btn-google"}) do %>
+       <span class="fa fa-google"></span>Sign in with Google
+     <% end %>
+     <%= link_to('auth/linkedin', {:class => "btn btn-block btn-social btn-linkedin"}) do %>
+         <span class="fa fa-linkedin"></span>Sign in with Linkedin
+     <% end %>
+     <%= link_to('auth/github', {:class => "btn btn-block btn-social btn-github"}) do %>
+       <span class="fa fa-github"></span>Sign in with Github
+     <% end %>
     <%= render "devise/shared/links" %>
     <% end %>
   </div>
