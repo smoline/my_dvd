@@ -13,12 +13,6 @@
       <%= Rails.application.class.parent_name %>
     </title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/business-casual.scss" rel="stylesheet">
-
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
@@ -59,8 +53,12 @@
                     <li>
                         <%= link_to "Home", root_path %>
                     </li>
-                    <li><a href="contact.html">Login</a></li>
-                    <li><a href="contact.html">Signup</a></li>
+                    <% if user_signed_in? %>
+                       <li><%= link_to 'Logout', destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+                    <% else %>
+                      <li><%= link_to "Login", new_user_session_path %></li>
+                     <li><%= link_to "Signup", new_user_registration_path %></li>
+                    <% end %>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -128,12 +126,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
 
     <!-- Script to Activate the Carousel -->
     <script>

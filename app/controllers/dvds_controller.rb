@@ -1,4 +1,5 @@
 class DvdsController < ApplicationController
+  before_action :authenticate_user!
   # GET /dvds
   def index
     @dvds = Dvd.all
