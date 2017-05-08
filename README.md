@@ -1,24 +1,11 @@
-# README
+# My DVDs with Devise and Omniauth
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This site may be viewed here: https://my-media-library.herokuapp.com/
 
-Things you may want to cover:
+* The purpose of this project is for me to implement Devise and Omniauth together
+* It also has a customized bootstrap landing page
 
-* Ruby version
+![My DVDs Landing](docs/MyDvdlanding.png)
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+__Future updates planned__
+* In the future I will be using this project to figure out the best way to implement multiple image uploads for each item
