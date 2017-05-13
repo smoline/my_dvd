@@ -14,6 +14,19 @@
     </div>
   <% end %>
 
+  <div class='row'>
+    <div class='col-md-8'>
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Barcode Scanner</h3>
+        </div>
+        <div class="panel-body">
+          <div id='barcode-scanner'></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
   <%# title %>
   <div class="form-group">
     <%= f.label :title, class: "col-sm-2 control-label" %>
@@ -31,6 +44,13 @@
     </div>
   </div>
 
+  <%# upc %>
+  <div class="form-group">
+    <%= f.label :upc, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :upc, class: "form-control" %>
+    </div>
+  </div>
 
   <%# Submit %>
   <div class="form-group">
