@@ -13,6 +13,7 @@ class DvdsController < ApplicationController
   # GET /dvds/new
   def new
     @dvd = Dvd.new
+    @dvd.upc = params[:upc]
   end
 
   # GET /dvds/1/edit
@@ -48,10 +49,19 @@ class DvdsController < ApplicationController
     redirect_to dvds_url, notice: 'Dvd was successfully destroyed.'
   end
 
+  def get_barcode
+    @dvd = Dvd.find_or_initialize_by(upc: params[:upc])
+    if @dvd.new_record?
+      redirect_to new_dvd_path(upc: params[:upc])
+    else
+      redirect_to @dvd
+    end
+  end
+
   private
 
   # Only allow a trusted parameter "white list" through.
   def dvd_params
-    params.require(:dvd).permit(:title, :disc_type)
+    params.require(:dvd).permit(:title, :disc_type, :upc)
   end
 end
