@@ -14,16 +14,11 @@
     </div>
   <% end %>
 
-  <div class='row'>
-    <div class='col-md-8'>
-      <div class="panel panel-primary">
-        <div class="panel-heading">
-          <h3 class="panel-title">Barcode Scanner</h3>
-        </div>
-        <div class="panel-body">
-          <div id='barcode-scanner'></div>
-        </div>
-      </div>
+
+  <%# Create DVD %>
+  <div class="form-group form-inline">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= f.submit class: "btn btn-primary" %>
     </div>
   </div>
 
@@ -52,10 +47,17 @@
     </div>
   </div>
 
-  <%# Submit %>
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-      <%= f.submit class: "btn btn-primary" %>
+<% end -%>
+
+<div class='row'>
+  <div class='col-md-8'>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Barcode Scanner</h3>
+      </div>
+      <div class="panel-body">
+        <div id='barcode-scanner'></div>
+      </div>
     </div>
   </div>
-<% end -%>
+</div>
