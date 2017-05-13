@@ -25,6 +25,9 @@ gem 'jquery-rails'
 
 gem 'turbolinks', '~> 5.0.0'
 
+gem 'httparty', '~> 0.15.2'
+gem 'json', '~> 2.1' 
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
