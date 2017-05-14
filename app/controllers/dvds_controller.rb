@@ -68,7 +68,6 @@ class DvdsController < ApplicationController
   def find_dvd_title(upc)
     response = HTTParty.get("http://www.searchupc.com/handlers/upcsearch.ashx?request_type=3&access_token=38EB43B6-3A6F-4840-9A10-150E79A0983A&upc=#{upc}")
     title = JSON.parse(response.body)["0"]["productname"]
-    p title
     return title
   end
 
