@@ -19,6 +19,7 @@ class DvdsController < ApplicationController
     @dvd = Dvd.new
     @dvd.upc = params[:upc]
     @dvd.title = params[:title]
+    # @dvd.description = params[:description]
   end
 
   # GET /dvds/1/edit
@@ -58,18 +59,27 @@ class DvdsController < ApplicationController
     upc = params[:upc]
     @dvd = Dvd.find_or_initialize_by(upc: params[:upc])
     if @dvd.new_record?
-      title = find_dvd_title(upc)
+      title = find_movie_title(upc)
+      # description = find_movie_description(title)
       redirect_to new_dvd_path(upc: params[:upc], title: title)
     else
       redirect_to @dvd
     end
   end
 
-  def find_dvd_title(upc)
+  def find_movie_title(upc)
     response = HTTParty.get("http://www.searchupc.com/handlers/upcsearch.ashx?request_type=3&access_token=38EB43B6-3A6F-4840-9A10-150E79A0983A&upc=#{upc}")
     title = JSON.parse(response.body)["0"]["productname"]
+    p title
     return title
   end
+
+  # def find_movie_description(title)
+  #   response = HTTParty.get("https://api.themoviedb.org/3/search/movie?api_key=c5bc1a29e4fbf6a35bf9ba5f8f7b4646&language=en-US&query=#{title}&page=1&include_adult=false")
+  #   description = JSON.parse(response.body)["results"]["overview"]
+  #   p description
+    # return description
+  # end
 
   private
 

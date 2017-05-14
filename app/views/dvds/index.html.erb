@@ -17,6 +17,7 @@
     <thead>
       <tr>
         <th>Title</th>
+        <th>Description</th>
         <th>Disc Type</th>
         <th>UPC</th>
         <th colspan="3"></th>
@@ -27,6 +28,7 @@
       <%- @dvds.each do |dvd| %>
       <tr>
         <td><%= dvd.title %></td>
+        <td><%= dvd.description %></td>
         <td><%= dvd.disc_type %></td>
         <td><%= dvd.upc %></td>
         <td>
