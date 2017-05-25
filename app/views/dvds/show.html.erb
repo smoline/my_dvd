@@ -7,6 +7,10 @@
     <span class="glyphicon glyphicon-pencil"></span>
     Edit
   <% end %>
+  <div class="well well-lg custom-well">
+    <p>Share with your friends!</p>
+    <%= social_share_button_tag(@dvd.title, :url => "http://my-media-library.com", allow_sites: %w(twitter facebook linkedin)) %>
+  </div>
   <h1>Show dvd</h1>
 </div>
 

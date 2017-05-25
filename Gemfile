@@ -26,7 +26,10 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5.0.0'
 
 gem 'httparty', '~> 0.15.2'
-gem 'json', '~> 2.1' 
+gem 'json', '~> 2.1'
+
+# To post to facebook and twitter
+gem 'social-share-button', '~> 0.10.0'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'

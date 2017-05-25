@@ -19,3 +19,4 @@
 //= require 'dvds'
 //= require quagga
 //= require turbolinks
+//= require social-share-button
